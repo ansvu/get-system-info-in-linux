@@ -46,7 +46,7 @@ This repo is more like a note for me but it will retrieve Network (IP, interface
       set_fact:
         filtered_disk_sizes: "{{ filtered_disk_sizes | default([]) + [{'name': item.split()[0], 'size': item.split()[1]}] }}"
       loop: "{{ disk_sizes }}"
-      when: item.split()[0]  | regex_search('^(sd[a-f]|nvme[0-9]+n[0-9]+)$') #('^(nvme[0-9]+n[0-9]+|sd[a-f]$)')
+      when: item.split()[0]  | regex_search('^(sd[a-f]|nvme[0-9]+n[0-9]+)$')
 
     - name: Display Network Interfaces and MAC Addresses as JSON
       debug:
