@@ -94,7 +94,7 @@ ansible-playbook -i inv.yml get-sys-info.yml --extra-vars "filter_pattern=ens|en
 ```
 
 ### Check the Output
-```shellSession
+```bash
 TASK [Display Network Interfaces and MAC Addresses as JSON] **************************************************************************************************************************
 ok: [192.xx.yy.12] => {
     "msg": [
